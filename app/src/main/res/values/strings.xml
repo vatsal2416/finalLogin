@@ -4,4 +4,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="or_else_you_can_sign_in_using_google">Or else you can sign in using google</string>
+    <string name="register">Register</string>
 </resources>
