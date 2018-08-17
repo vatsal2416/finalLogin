@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -22,6 +25,7 @@ public class homeActivity extends AppCompatActivity {
     private Button btnLogout;
     GoogleSignInOptions gso;
     private FirebaseAuth mAuth;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,22 @@ public class homeActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         mAuth = FirebaseAuth.getInstance();
         TextView textViewName = findViewById(R.id.textView7);
-        textViewName.setText(mAuth.getCurrentUser().getEmail());
+        imageView = findViewById(R.id.imageView);
+
+        //imageView.setImageURI(mAuth.getCurrentUser().getPhotoUrl());
+
+        String personName = account.getDisplayName();
+        String personPhotoUrl = account.getPhotoUrl().toString();
+        String email = account.getEmail();
+        textViewName.setText(personPhotoUrl);
+
+        textViewName.setText(mAuth.getCurrentUser().getDisplayName());
+
+        Glide.with(getApplicationContext()).load(personPhotoUrl)
+                .thumbnail(0.5f)
+                .crossFade()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(imageView);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
