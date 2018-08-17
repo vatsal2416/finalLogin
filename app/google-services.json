@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "221770857630",
+    "firebase_url": "https://finallogin-7a807.firebaseio.com",
+    "project_id": "finallogin-7a807",
+    "storage_bucket": "finallogin-7a807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221770857630:android:939721f0f75cd52b",
+        "android_client_info": {
+          "package_name": "com.vatsal2416.finallogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221770857630-2joosi3phua7logl2bj63e7itovqhvdv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vatsal2416.finallogin",
+            "certificate_hash": "91e8c7e591e1be60ed2209fb813a88d82132f2e5"
+          }
+        },
+        {
+          "client_id": "221770857630-f47l6e0bb96orhl5b01u6rpb48t17lnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD21d2vshUoSsLLnhWBofKrgeRt1xSWtWY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221770857630-f47l6e0bb96orhl5b01u6rpb48t17lnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
